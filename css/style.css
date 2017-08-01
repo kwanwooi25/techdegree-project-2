@@ -8,13 +8,35 @@ BASIC LAYOUT
 
 body {
   font-family: 'Lato', sans-serif;
+  font-size: 1.1em;
   background-color: #fafafa;
   color: #4a4a4a;
+  margin: 0;
 }
 
-.wrapper {
-  max-width: 95%;
+header {
+  width: 90%;
   margin: 0 auto;
+}
+
+main {
+  background-color: #fff;
+  padding: 20px 5%;
+  margin: 30px 0;
+}
+
+.wrapper-bottom {
+  width: 90%;
+  margin: 0 auto;
+}
+
+p {
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: #4a4a4a;
 }
 
 hr {
@@ -22,7 +44,7 @@ hr {
 }
 
 /**************************************
-HEADER & NAVIGATION
+HEADER
 ***************************************/
 
 .main-header {
@@ -39,14 +61,12 @@ HEADER & NAVIGATION
 
 .main-nav a {
   font-size: 1.1em;
-  font-weight: 700;
+  font-weight: 900;
   text-align: center;
   text-transform: uppercase;
-  color: #4a4a4a;
   background-color: #fff;
-  padding: 10px;
+  padding: 15px;
   margin: 10px 0;
-  text-decoration: none;
   display: block;
 }
 
@@ -56,9 +76,95 @@ HEADER & NAVIGATION
   transition: .5s;
 }
 
+.profile {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.profile-image {
+  width: 70%;
+  margin: 10px;
+}
+
+.profile p {
+  color: #7f7f7f;
+}
+
+/**************************************
+MAIN
+***************************************/
+
+h2 {
+  font-size: 1.2em;
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 10px;
+}
+
+.portfolio-card {
+  text-align: center;
+  margin: 50px 0;
+  padding: 10px;
+}
+
+.portfolio-card:hover {
+  color: #fafafa;
+  background-color: #7f7f7f;
+  transition: .3s;
+}
+
+.portfolio-image{
+  width: 100%;
+  margin: 10px 0;
+}
+
+.skills-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.skills-list:hover {
+  color: #fafafa;
+  background-color: #7f7f7f;
+  transition: .3s;
+}
+
+.skills-image {
+  flex: 1;
+  width: 20%;
+}
+
+.skills-description {
+  flex: 5;
+  padding-left: 20px;
+}
+
 /**************************************
 FOOTER
 ***************************************/
+
+#contact {
+  text-align: center;
+  padding: 10px;
+}
+
+#contact p {
+  font-size: .9em;
+  color: #7f7f7f;
+  padding: 5px 0;
+}
+
+#contact a:hover {
+  color: #7f7f7f;
+}
+
+.phone,
+.email {
+  font-size: 1.1em;
+  padding: 0 10px;
+}
 
 .main-footer {
   list-style: none;
@@ -75,8 +181,6 @@ FOOTER
 }
 
 .backToTop a {
-  text-decoration: none;
-  color: #4a4a4a;
   padding: 10px 0 10px 10px;
 }
 

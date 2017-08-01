@@ -8,33 +8,108 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
   </head>
   <body>
-    <div class="wrapper">
-      <!-- header & nav -->
-      <header>
-        <h1 class="main-header">Kwanwoo Jeong</h1>
-        <nav>
-          <ul class="main-nav">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </nav>
-      </header>
-      <!-- / header & nav -->
+    <!-- header -->
+    <header>
+      <h1 class="main-header">Kwanwoo Jeong</h1>
+      <nav>
+        <ul class="main-nav">
+          <li><a href="#">Home</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="profile">
+        <img src="img/responsive-layout-profile.png" alt="Photograph of Kwanwoo Jeong" class="profile-image">
+        <p>Hi! I'm a front-end developer who loves responsive design and css. I recently finished a degree in front-end web development at Treehouse and am excited to put all my skills to use!</p>
+      </div>
+    </header>
+    <!-- /header -->
 
-      <!-- main contents -->
-      <main>
+    <!-- main -->
+    <main>
+      <!-- #portfolio -->
+      <section id="portfolio">
+        <h2>Portfolio</h2>
+        <div class="portfolio-card">
+          <img src="img/portfolio-1.png" alt="Snapshot of Marketing Page" class="portfolio-image">
+          <h3>Marketing Page</h3>
+          <p>This project shows the front page of a marketing website meant for a specific business I'm interested in.</p>
+        </div>
+        <div class="portfolio-card">
+          <img src="img/portfolio-2.png" alt="Snapshot of Search Page" class="portfolio-image">
+          <h3>Search Page</h3>
+          <p>This project searches through a specific database to find information that the user is trying to look up.</p>
+        </div>
+        <div class="portfolio-card">
+          <img src="img/portfolio-3.png" alt="Snapshot of Travel App" class="portfolio-image">
+          <h3>Travel App</h3>
+          <p>This project compares travel times based on different transportation methods and tells you the best one.</p>
+        </div>
+        <div class="portfolio-card">
+          <img src="img/portfolio-4.png" alt="Snapshot of Map of Favorite Spots" class="portfolio-image">
+          <h3>Map of Favorit Spots</h3>
+          <p>This project uses mapping apis to plot points for my favorit spots in the city for a do-it-yourself walking tour.</p>
+        </div>
+        <div class="portfolio-card">
+          <img src="img/portfolio-5.png" alt="Snapshot of Photo Gallery" class="portfolio-image">
+          <h3>Photo Gallery</h3>
+          <p>This project shows pictures from a recent trip to the viewer and aloows them to easily navigate through photos.</p>
+        </div>
+        <div class="portfolio-card">
+          <img src="img/portfolio-6.png" alt="Snapshot of Calculator" class="portfolio-image">
+          <h3>Calculator</h3>
+          <p>Someone can enter in the numbers they want, and the press the big blue button and get the result.</p>
+        </div>
+      </section>
+      <!-- /#portfolio -->
+      <!-- #skills -->
+      <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-list">
+          <img src="img/html_logo.svg" alt="Logo of HTML5" class="skills-image">
+          <div class="skills-description">
+            <h3>HTML</h3>
+            <p>I can set the structure of the website.</p>
+          </div>
+        </div>
+        <div class="skills-list">
+          <img src="img/css_logo.svg" alt="Logo of CSS3" class="skills-image">
+          <div class="skills-description">
+            <h3>CSS</h3>
+            <p>I can style the website.</p>
+          </div>
+        </div>
+        <div class="skills-list">
+          <img src="img/js_logo.svg" alt="Logo of Javascript" class="skills-image">
+          <div class="skills-description">
+            <h3>JavaScript</h3>
+            <p>I can organize the behavior of the website.</p>
+          </div>
+        </div>
+      </section>
+      <!-- /#skills -->
+    </main>
+    <!-- /main -->
 
-      </main>
-      <!-- / main contents -->
-
-      <!-- footer -->
+    <!-- .wrapper-bottom -->
+    <div class="wrapper-bottom">
+      <!-- #contact -->
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>If you're interested in chatting or want more information about what I've been working on, I'd love to hear from you!</p>
+        <p>Phone <strong><a href="tel:+82-10-2230-5268" class="phone">+82-10-2230-5268</a></strong></p>
+        <p>Email <strong><a href="mailto:kwanwoo.jeong@gmail.com" class="email">kwanwoo.jeong@gmail.com</a></strong></p>
+      </section>
+      <!-- /#contact -->
       <hr>
+      <!-- footer -->
       <footer class="main-footer">
         <div class="copyright">&copy; 2017 Kwanwoo Jeong</div>
         <div class="backToTop"><a href="#">BACK TO TOP</a></div>
       </footer>
       <!-- / footer -->
     </div>
+    <!-- /.wrapper-bottom -->
   </body>
 </html>
