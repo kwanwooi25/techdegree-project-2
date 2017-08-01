@@ -9,9 +9,10 @@ BASIC LAYOUT
 body {
   font-family: 'Lato', sans-serif;
   font-size: 1.1em;
-  background-color: #fafafa;
+  background-color: #f3f7ff;
   color: #4a4a4a;
-  margin: 0;
+  margin: 0 auto;
+  max-width: 1280px;
 }
 
 header {
@@ -21,8 +22,8 @@ header {
 
 main {
   background-color: #fff;
-  padding: 20px 5%;
-  margin: 30px 0;
+  /*padding: 20px 5%;
+  margin: 30px 0;*/
 }
 
 .wrapper-bottom {
@@ -43,12 +44,19 @@ hr {
   margin: 20px 0;
 }
 
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 /**************************************
 HEADER
 ***************************************/
 
-.main-header {
-  font-weight: 900;
+.header-title {
+  font-family: 'Lobster', cursive;
+  font-size: 2.5em;
   text-align: center;
   padding: 10px;
 }
@@ -78,7 +86,7 @@ HEADER
 
 .profile {
   width: 90%;
-  margin: 0 auto;
+  margin: 0 auto 50px;
   text-align: center;
 }
 
@@ -96,11 +104,20 @@ MAIN
 ***************************************/
 
 h2 {
+  display: block;
   font-size: 1.2em;
   font-weight: 900;
   text-align: center;
   text-transform: uppercase;
   padding: 10px;
+  margin: 30px 0;
+  width: 100%;
+}
+
+#portfolio {
+  width: 95%;
+  margin: 0 auto;
+  padding: 30px 0;
 }
 
 .portfolio-card {
@@ -111,7 +128,7 @@ h2 {
 
 .portfolio-card:hover {
   color: #fafafa;
-  background-color: #7f7f7f;
+  background-color: #3f519e;
   transition: .3s;
 }
 
@@ -120,24 +137,34 @@ h2 {
   margin: 10px 0;
 }
 
+#skills {
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 30px;
+}
+
 .skills-list {
   display: flex;
+  display: -ms-flexbox;
   justify-content: space-between;
+  -ms-flex-pack: justify;
 }
 
 .skills-list:hover {
   color: #fafafa;
-  background-color: #7f7f7f;
+  background-color: #3f519e;
   transition: .3s;
 }
 
 .skills-image {
   flex: 1;
-  width: 20%;
+  -ms-flex: 1;
+  max-width: 15%;
 }
 
 .skills-description {
-  flex: 5;
+  flex: 3;
+  -ms-flex: 3;
   padding-left: 20px;
 }
 
@@ -147,6 +174,7 @@ FOOTER
 
 #contact {
   text-align: center;
+  margin: 0 auto;
   padding: 10px;
 }
 
@@ -167,11 +195,16 @@ FOOTER
 }
 
 .main-footer {
-  list-style: none;
-  margin: 10px 0 0;
+  margin: 20px 0;
   padding: 0;
   display: flex;
+  display: -ms-flexbox;
   justify-content: space-between;
+  -ms-flex-pack: justify;
+}
+
+.footer-nav {
+  display: none;
 }
 
 .copyright,
@@ -187,4 +220,166 @@ FOOTER
 .backToTop a:hover {
   color: #7f7f7f;
   transition: .2s;
+}
+
+/**************************************
+MEDIA QUERIES
+***************************************/
+
+@media (min-width: 768px) {
+
+  /**************************************
+  HEADER
+  ***************************************/
+
+  .main-nav {
+    display: flex;
+    display: -ms-flexbox;
+  }
+
+  .main-nav li {
+    flex: 1;
+    -ms-flex: 1;
+  }
+
+  .main-nav a {
+    font-size: 1em;
+    background-color: #f3f7ff;
+    border-bottom: 1px solid #4a4a4a;
+  }
+
+  .profile-image {
+    float: right;
+    width: 40%;
+  }
+
+  .profile p {
+    text-align: left;
+  }
+
+  /**************************************
+  MAIN
+  ***************************************/
+
+  #portfolio,
+  #skills {
+    display: flex;
+    display: -ms-flexbox;
+    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+  }
+
+  .portfolio-card,
+  .skills-list {
+    width: 50%;
+    margin: 20px 0;
+  }
+
+  .skills-image {
+    -ms-flex: 1;
+  }
+  .skills-description {
+    -ms-flex: 3;
+  }
+
+  /**************************************
+  FOOTER
+  ***************************************/
+
+  #contact {
+    width: 80%;
+  }
+
+  .backToTop {
+    display: none;
+  }
+
+  .footer-nav {
+    display: flex;
+    display: -ms-flexbox;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #f3f7ff;
+  }
+
+  .footer-nav a {
+    font-size: .7em;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 5px;
+  }
+
+  .footer-nav a:hover {
+    color: #fff;
+    background-color: #4a4a4a;
+    transition: .2s;
+  }
+
+}
+
+@media (min-width: 1024px) {
+
+  /**************************************
+  HEADER
+  ***************************************/
+
+  .main-header {
+    display: flex;
+    display: -ms-flexbox;
+    justify-content: space-between;
+    -ms-flex-pack: justify;
+    align-items: center;
+    padding: 10px 0 20px;
+  }
+
+  .header-title {
+    flex: 3;
+    -ms-flex: 2;
+    text-align: left;
+  }
+
+  nav {
+    flex: 2;
+    -ms-flex: 3;
+  }
+
+  .header-title,
+  .main-nav,
+  .main-nav a {
+    margin: 0;
+  }
+
+  .main-nav a {
+    font-size: 1em;
+  }
+
+  .profile {
+    width: 100%;
+  }
+
+  /**************************************
+  MAIN
+  ***************************************/
+
+  .portfolio-card,
+  .skills-list {
+    width: calc(99%/3);
+    margin: 20px 0;
+  }
+
+  .skills-description {
+    -ms-flex: 2;
+  }
+
+  /**************************************
+  FOOTER
+  ***************************************/
+
+  #contact {
+    width: 65%;
+  }
+
 }
